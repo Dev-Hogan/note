@@ -2,6 +2,7 @@
 import React from "react"
 import { Layout } from "antd"
 import { cn } from "@/utils"
+import { NtNav, NtMenuItem } from "@/components"
 
 const { Content, Sider } = Layout
 
@@ -19,7 +20,13 @@ export const NtLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<>
 			<div className="w-full flex flex-1">
-				<NtSider></NtSider>
+				<NtSider>
+					<NtNav>
+						{["a", "b", "focus"].map(d => {
+							return <NtMenuItem key={d}>{d}</NtMenuItem>
+						})}
+					</NtNav>
+				</NtSider>
 				<NtContent>{children}</NtContent>
 			</div>
 		</>

@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={(inter.className, "theme-origin")}>
+			<body className={(inter.className, "theme-light")}>
 				<AntdRegistry>
 					<ConfigProvider theme={theme}>
 						<NtLayout>{children}</NtLayout>

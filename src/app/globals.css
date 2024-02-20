@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.theme-origin {
-	--color-primary: 229 110 93;
-}
+@import url("../styles/light.css");
+@import url("../styles/origin.css");
+@import url("../styles/dark.css");
