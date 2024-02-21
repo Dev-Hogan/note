@@ -4,7 +4,7 @@ import { NtNav, NtMenuItem } from "@/components"
 
 export const NtSider = ({ children }: { children?: React.ReactNode }) => {
 	return (
-		<div className="flex flex-col h-screen w-[400px] border-r">{children}</div>
+		<div className="flex flex-col h-screen w-[400px] border-r border-light-2 bg-light">{children}</div>
 	)
 }
 
