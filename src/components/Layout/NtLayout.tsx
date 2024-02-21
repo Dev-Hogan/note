@@ -1,10 +1,6 @@
-"use client"
 import React from "react"
-import { Layout } from "antd"
 import { cn } from "@/utils"
 import { NtNav, NtMenuItem } from "@/components"
-
-const { Content, Sider } = Layout
 
 export const NtSider = ({ children }: { children?: React.ReactNode }) => {
 	return (
@@ -19,7 +15,7 @@ export const NtContent = ({ children }: { children?: React.ReactNode }) => {
 export const NtLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<>
-			<div className="w-full flex flex-1">
+			<div className={cn("w-full flex flex-1")}>
 				<NtSider>
 					<NtNav>
 						{["a", "b", "focus"].map(d => {

@@ -1,3 +1,26 @@
 .theme-dark {
-    --color-primary: 255 172 10;
+	--color-primary: 255 172 10;
+	--color-theme-10: 33 32 30;
+	--color-theme-15: 63 54 33;
+	--color-theme-20: 96 77 34;
+	--color-theme-40: 169 164 29;
+	--color-theme-60: 255 217 144;
+	--color-theme-80: 211 148 23;
+
+	--color-light-1: 25 25 25;
+	--color-light-2: 42 42 42;
+	--color-light-3: 90 90 90;
+	--color-light-4: 153 153 153;
+	--color-light-5: 102 102 102;
+	--color-light-6: 230 230 230;
+	--color-light-7: 247 247 247;
+
+	--color-base: 21 21 21;
+	--color-white: 255 255 255;
+	--color-black: 0 0 0;
+	--color-link: 29 125 195;
+	--color-tag: 163 183 194;
+	--color-delete: 210 59 59;
+	--color-iconsel: 34 34 34;
+	--color-masked: 26 26 26;
 }

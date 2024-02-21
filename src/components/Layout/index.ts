@@ -1,1 +1,2 @@
-export { NtLayout, NtSider } from "./NtLayout"
+export * from "./NtLayout"
+export * from "./NtProvider"

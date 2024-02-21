@@ -1,11 +1,10 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import React from "react"
+import { ReactNode } from "react"
 import { AntdRegistry } from "@ant-design/nextjs-registry"
-import { ConfigProvider } from "antd"
-import theme from "@/theme"
-import { NtLayout } from "@/components"
+
+import { NtLayout, NtProvider } from "@/components"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -17,15 +16,15 @@ export const metadata: Metadata = {
 export default function RootLayout({
 	children,
 }: Readonly<{
-	children: React.ReactNode
+	children: ReactNode
 }>) {
 	return (
 		<html lang="en">
-			<body className={(inter.className, "theme-light")}>
+			<body className={inter.className}>
 				<AntdRegistry>
-					<ConfigProvider theme={theme}>
+					<NtProvider>
 						<NtLayout>{children}</NtLayout>
-					</ConfigProvider>
+					</NtProvider>
 				</AntdRegistry>
 			</body>
 		</html>
