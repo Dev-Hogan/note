@@ -19,9 +19,10 @@ export const useTheme = () => useContext(ThemeContext)
 
 export const NtProvider = ({ children }: { children: ReactNode }) => {
 	const [theme, setTheme] = useState<Theme>(() => {
-		if (window) {
+		if (typeof window !== "undefined") {
 			return getLocal(THEME_KEY) || "light"
 		}
+		return "light" // 在服务器端渲染时提供默认值
 	})
 	return (
 		<ThemeContext.Provider value={{ theme, setTheme }}>

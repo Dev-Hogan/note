@@ -9,11 +9,12 @@ type Theme = "light" | "dark" | "origin"
 export default function Page() {
 	const themes = ["light", "dark", "origin"]
 	const [the, setThe] = useState(() => {
-		if (window) {
+		if (typeof window !== "undefined") {
 			const theme = getLocal(THEME_KEY)
 
 			return theme || themes[0]
 		}
+		return themes[0]
 	})
 	const { setTheme } = useTheme()
 
