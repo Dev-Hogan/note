@@ -1,16 +1,11 @@
 "use client"
-import { cn } from "@/utils"
-const url = location.pathname
 
-export const NtNav = ({ children }: { children: React.ReactNode }) => {
-	return (
-		<div
-			className={cn(
-				url === "/focus" ? "text-red-500" : "",
-				"flex flex-1 flex-col"
-			)}
-		>
-			{children}
-		</div>
-	)
+export const NtNav = ({
+	children,
+	className,
+}: {
+	children: React.ReactNode
+	className?: string
+}) => {
+	return <div className={className}>{children}</div>
 }

@@ -5,3 +5,7 @@
 @import url("../styles/light.css");
 @import url("../styles/origin.css");
 @import url("../styles/dark.css");
+
+:root {
+	font-size: 13px;
+}
