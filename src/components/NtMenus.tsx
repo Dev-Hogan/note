@@ -1,8 +1,7 @@
 "use client"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import type { UrlObject } from "url"
+import { usePathname, useRouter } from "next/navigation"
 import { cn } from "@/utils"
+import { Menus } from "@/router"
 export const NtMenuItem = ({
 	name,
 	icon,
@@ -11,18 +10,21 @@ export const NtMenuItem = ({
 	className,
 }: {
 	children?: React.ReactNode
-	path?: string | UrlObject
+	path?: string
 	icon?: any
 	name?: string
 	className?: string
 }) => {
 	const pathName = usePathname()
+	const router = useRouter()
 
 	return (
-		<Link
-			href={path || ""}
+		<div
+			onClick={() => {
+				path && router.push(path)
+			}}
 			className={cn(
-				"flex items-center space-x-2 py-[6px] pl-2 transition-colors  hover:bg-light-2 rounded-[6px]",
+				"flex items-center space-x-2 py-[6px] pl-2 transition-colors cursor-pointer hover:bg-light-2 rounded-[6px]",
 				className,
 				pathName === path ? "bg-light-2" : ""
 			)}
@@ -30,11 +32,9 @@ export const NtMenuItem = ({
 			<div>{icon}</div>
 			{children}
 			<div>{name}</div>
-		</Link>
+		</div>
 	)
 }
-
-export type Menus = { name?: string; icon?: any; path?: string }[]
 
 export const NtMenus = ({
 	children,

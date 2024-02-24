@@ -1,6 +1,8 @@
 import React from "react"
+import { MagnifyingGlassIcon, PlusCircledIcon } from "@radix-ui/react-icons"
 import { cn } from "@/utils"
-import { NtNav, NtMenuItem, NtMenus, type Menus, NtInput } from "@/components"
+import { NtNav, NtMenus, NtInput, NtHeader } from "@/components"
+import { overViewLinks } from "@/router"
 
 export const NtSider = ({
 	children,
@@ -22,57 +24,35 @@ export const NtSider = ({
 }
 
 export const NtContent = ({ children }: { children?: React.ReactNode }) => {
-	return <div className="flex flex-1 flex-col">{children}</div>
+	return (
+		<main className="flex flex-1 flex-col">
+			<NtHeader></NtHeader>
+			{children}
+		</main>
+	)
 }
 
-const menusOverView: Menus = [
-	{ name: "全部", path: "/", icon: "icon" },
-	{
-		name: "聚焦中",
-		path: "/focus",
-		icon: "icon",
-	},
-	{
-		name: "待回答",
-		path: "/waitingAnswer",
-		icon: "icon",
-	},
-	{
-		name: "随机看",
-		path: "/randomLook",
-		icon: "icon",
-	},
-	{
-		name: "废纸篓",
-		path: "/wastebasket",
-		icon: "icon",
-	},
-	{
-		name: "辅助开发工具",
-		path: "/dev",
-		icon: "icon",
-	},
-]
 export const NtLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<>
 			<div className={cn("w-full flex flex-1")}>
 				<NtSider className="space-y-2 px-3 pt-6">
 					<NtInput
+						prefix={<MagnifyingGlassIcon />}
 						className="bg-light-2  hover:bg-light "
 						focusClassName="!bg-light "
 						placeholder="搜索"
 					></NtInput>
 					<NtNav className="space-y-2 ">
 						<div className="py-3 text-s text-light-5">概览</div>
-						<NtMenus options={menusOverView}></NtMenus>
+						<NtMenus options={overViewLinks}></NtMenus>
 					</NtNav>
 					<NtNav className="space-y-2 ">
 						<div className="py-3 flex justify-between items-center pr-3">
 							<div className="text-s text-light-5">分类</div>
-							<div>icon</div>
+							<PlusCircledIcon className="cursor-pointer" />
 						</div>
-						<NtMenus options={menusOverView}></NtMenus>
+						<NtMenus options={overViewLinks}></NtMenus>
 					</NtNav>
 				</NtSider>
 				<NtContent>{children}</NtContent>

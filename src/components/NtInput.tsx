@@ -25,7 +25,7 @@ export const NtInput = ({
 				className
 			)}
 		>
-			{prefix}
+			<div className="ml-1">{prefix}</div>
 			<input
 				className={cn(
 					"ml-2 outline-none h-full flex-1 rounded-m caret-primary placeholder:text-light-4 text-s bg-inherit",
