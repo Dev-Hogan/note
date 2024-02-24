@@ -29,7 +29,7 @@ export const NtMenuItem = ({
 				pathName === path ? "bg-light-2" : ""
 			)}
 		>
-			<div>{icon}</div>
+			<div className="text-light-4">{icon}</div>
 			{children}
 			<div>{name}</div>
 		</div>

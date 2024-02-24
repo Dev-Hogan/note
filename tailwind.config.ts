@@ -53,6 +53,9 @@ const config: Config = {
 				s: "4px",
 				m: "8px",
 			},
+			borderColor: {
+				default: "#EAEAEA",
+			},
 			fontSize: {
 				s: "11px",
 				m: "13px",

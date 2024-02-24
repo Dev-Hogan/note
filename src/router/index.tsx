@@ -6,6 +6,7 @@ import {
 	TrashIcon,
 	DashboardIcon,
 	DiscIcon,
+	ChevronRightIcon,
 } from "@radix-ui/react-icons"
 export type Menus = { name?: string; icon?: any; path?: string }[]
 export const overViewLinks: Menus = [
@@ -39,5 +40,18 @@ export const overViewLinks: Menus = [
 		name: "辅助开发工具",
 		path: "/dev",
 		icon: <DashboardIcon />,
+	},
+]
+
+export const settingActionLinks: Menus = [
+	{
+		name: "数据统计",
+		path: "/dashboard",
+		icon: <ChevronRightIcon />,
+	},
+	{
+		name: "设置",
+		path: "/setting",
+		icon: <ChevronRightIcon />,
 	},
 ]

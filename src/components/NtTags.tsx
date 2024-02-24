@@ -67,9 +67,9 @@ export const NtTags = ({ children, tags, className }: NtTagsProps) => {
 		<div className={cn("space-x-1", className)}>
 			{children}
 			{tags?.map((t, i) => (
-				<ContextMenu key={i}>
-					<ContextMenuTrigger>
-						<NtTag>{t.name}</NtTag>
+				<ContextMenu key={t.id}>
+					<ContextMenuTrigger asChild>
+						<NtTag key={i}>{t.name}</NtTag>
 					</ContextMenuTrigger>
 					<ContextMenuContent className="bg-white">
 						{tagContextMenu.map((m, i) => (
