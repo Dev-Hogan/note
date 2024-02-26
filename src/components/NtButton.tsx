@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { cn } from "@/utils"
 export const NtButton = ({
 	children,
@@ -7,13 +7,13 @@ export const NtButton = ({
 }: {
 	children: React.ReactNode
 	className?: string
-	type?: "primary"
+	type?: "theme"
 }) => {
 	return (
 		<div
 			className={cn(
 				"px-3 py-1 border border-light-2 text-light-2 rounded-s",
-				type === "primary" ? "bg-primary text-white border-primary" : "",
+				type === "theme" ? "bg-theme text-white border-theme" : "",
 				className
 			)}
 		>

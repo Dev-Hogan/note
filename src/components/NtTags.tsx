@@ -23,8 +23,8 @@ export const NtTag = ({ children, className }: NtTagProp) => {
 		<div
 			className={cn(
 				"py-[14px] px-2 bg-light rounded-[6px] text-light-6",
-				" hover:text-primary transition-colors cursor-pointer",
-				active ? "bg-primary-2 text-primary" : "",
+				" hover:text-theme transition-colors cursor-pointer",
+				active ? "bg-theme-15 text-theme" : "",
 				className
 			)}
 			onClick={() => setActive(!active)}

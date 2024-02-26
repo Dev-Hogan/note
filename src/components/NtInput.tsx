@@ -19,8 +19,8 @@ export const NtInput = ({
 		<div
 			tabIndex={-1}
 			className={cn(
-				"group border text-light-6  border-light-2 hover:border-primary transition-colors duration-75 rounded-m space-x-1 flex h-[28px] w-full flex-row items-center",
-				Focus ? "border-primary" : "",
+				"group border text-light-6  border-light-2 hover:border-theme transition-colors duration-75 rounded-m space-x-1 flex h-[28px] w-full flex-row items-center",
+				Focus ? "border-theme" : "",
 				Focus ? focusClassName : "",
 				className
 			)}
@@ -28,7 +28,7 @@ export const NtInput = ({
 			<div className="ml-1 text-light-5">{prefix}</div>
 			<input
 				className={cn(
-					"ml-2 outline-none h-full flex-1 rounded-m caret-primary placeholder:text-light-4 text-s bg-inherit",
+					"ml-2 outline-none h-full flex-1 rounded-m caret-theme placeholder:text-light-4 text-s bg-inherit",
 					inputClassName
 				)}
 				{...props}

@@ -7,6 +7,7 @@ import {
 	DialogTrigger,
 	DialogFooter,
 } from "@/components/Dialog"
+import { NtButton } from "@/components"
 export function useDialog({
 	trigger,
 	content,
@@ -27,6 +28,9 @@ export function useDialog({
 				{footer ? (
 					<DialogFooter>
 						<DialogClose asChild>{footer}</DialogClose>
+						<DialogClose asChild>
+							<NtButton>我真是奇怪</NtButton>
+						</DialogClose>
 					</DialogFooter>
 				) : undefined}
 			</DialogContent>

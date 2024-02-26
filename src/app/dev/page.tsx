@@ -45,7 +45,7 @@ export default function Page() {
 									setTheme(e.target.value as Theme)
 								}}
 							/>
-							<div className="text-primary-6">{t}</div>
+							<div className="text-theme-6">{t}</div>
 						</label>
 					)
 				})}

@@ -90,7 +90,7 @@ export const NtLayout = ({ children }: { children: React.ReactNode }) => {
 												<NtInput></NtInput>
 												<div className="self-end space-x-2">
 													<NtButton>取消</NtButton>
-													<NtButton type="primary">确定</NtButton>
+													<NtButton type="theme">确定</NtButton>
 												</div>
 											</DialogContent>
 										</Dialog> */}
