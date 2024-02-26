@@ -5,7 +5,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { Cross2Icon } from "@radix-ui/react-icons"
 import { useTheme } from "@/components"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/utils"
 
 const Dialog = DialogPrimitive.Root
 
@@ -35,7 +35,6 @@ const DialogContent = React.forwardRef<
 	React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
 >(({ className, children, ...props }, ref) => {
 	const { theme } = useTheme()
-	console.log(theme, "弹窗主ti")
 
 	return (
 		<DialogPortal>

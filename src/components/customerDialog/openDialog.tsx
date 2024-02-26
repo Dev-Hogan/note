@@ -6,9 +6,8 @@ import {
 	DialogTitle,
 	DialogTrigger,
 	DialogFooter,
-} from "@/components/Dialog"
-import { NtButton } from "@/components"
-export function useDialog({
+} from "@/components"
+export function openDialog({
 	trigger,
 	content,
 	title,
@@ -21,17 +20,15 @@ export function useDialog({
 }) {
 	const NtDialog = (
 		<Dialog>
-			<DialogTrigger>{trigger ? trigger : <div className="text-theme">点击弹窗</div>}</DialogTrigger>
+			<DialogTrigger>
+				{trigger ? trigger : <div className="text-theme">点击弹窗</div>}
+			</DialogTrigger>
 			<DialogContent>
 				{title ? <DialogTitle> {title}</DialogTitle> : undefined}
 				{content ? content : undefined}
 				{footer ? (
 					<DialogFooter>
-						<DialogClose asChild>{footer}</DialogClose>
-						<DialogClose asChild>
-							<NtButton>我真是奇怪</NtButton>
-						</DialogClose>
-							<div className="text-theme">样式呢</div>
+						<DialogClose>{footer}</DialogClose>
 					</DialogFooter>
 				) : undefined}
 			</DialogContent>

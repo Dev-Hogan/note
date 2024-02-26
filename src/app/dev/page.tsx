@@ -4,7 +4,7 @@ import { useState } from "react"
 import { getLocal, setLocal } from "@/utils"
 import { THEME_KEY } from "@/const"
 import { useTheme, NtButton } from "@/components"
-import { useDialog } from "@/hooks"
+import { openDialog } from "@/components/customerDialog"
 
 type Theme = "light" | "dark" | "origin"
 export default function Page() {
@@ -17,10 +17,7 @@ export default function Page() {
 		}
 		return themes[0]
 	})
-	const { setTheme, theme } = useTheme()
-	console.log(theme, "主题")
-
-	// const Dialog = useDialog({})
+	const { setTheme } = useTheme()
 
 	return (
 		<main>
@@ -54,7 +51,7 @@ export default function Page() {
 			</div>
 			<br />
 			<div>
-				{useDialog({
+				{openDialog({
 					title: "123",
 					content: <div>测试内容</div>,
 					footer: <NtButton type="theme">关闭</NtButton>,

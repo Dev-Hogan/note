@@ -20,11 +20,11 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 	TooltipProvider,
-	// Dialog,
-	// DialogContent,
-	// DialogTrigger,
-	// DialogFooter,
-	// DialogClose,
+	Dialog,
+	DialogContent,
+	DialogTrigger,
+	DialogFooter,
+	DialogClose,
 	NtButton,
 } from "@/components"
 import { overViewLinks, type Menus } from "@/router"
@@ -135,18 +135,6 @@ export const NtLayout = ({ children }: { children: React.ReactNode }) => {
 				</NtSide>
 				<NtContent>{children}</NtContent>
 			</div>
-			{/* <Modal
-				title="新增分类"
-				centered
-				open={open}
-				onOk={() => setOpen(false)}
-				onCancel={() => setOpen(false)}
-				okText="确定"
-				cancelText="取消"
-				width={270}
-			>
-				<NtInput></NtInput>
-			</Modal> */}
 		</>
 	)
 }

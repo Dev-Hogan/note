@@ -1,1 +1,1 @@
-export * from "./useDialog"
+export * from "../components/customerDialog/openDialog"
