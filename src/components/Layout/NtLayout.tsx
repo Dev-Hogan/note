@@ -111,7 +111,7 @@ export const NtLayout = ({ children }: { children: React.ReactNode }) => {
 						<Popover>
 							<PopoverTrigger>
 								<MixerHorizontalIcon className="cursor-pointer text-light-4"></MixerHorizontalIcon>
-								<PopoverContent className="ml-5 px-[22px] py-[14px] w-[203px] space-y-2">
+								<PopoverContent className="ml-5 text-light-7 px-[22px] py-[14px] w-[203px] space-y-2">
 									<NtLink
 										href={"/dashboard"}
 										className="flex justify-between h-8 cursor-pointer"

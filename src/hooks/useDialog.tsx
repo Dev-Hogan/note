@@ -21,7 +21,7 @@ export function useDialog({
 }) {
 	const NtDialog = (
 		<Dialog>
-			<DialogTrigger>{trigger ? trigger : <div>点击弹窗</div>}</DialogTrigger>
+			<DialogTrigger>{trigger ? trigger : <div className="text-theme">点击弹窗</div>}</DialogTrigger>
 			<DialogContent>
 				{title ? <DialogTitle> {title}</DialogTitle> : undefined}
 				{content ? content : undefined}
@@ -31,6 +31,7 @@ export function useDialog({
 						<DialogClose asChild>
 							<NtButton>我真是奇怪</NtButton>
 						</DialogClose>
+							<div className="text-theme">样式呢</div>
 					</DialogFooter>
 				) : undefined}
 			</DialogContent>

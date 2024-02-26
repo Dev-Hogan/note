@@ -31,6 +31,8 @@ const config: Config = {
 				"light-7": "rgb(var(--color-light-7) / <alpha-value>)",
 
 				base: "rgb(var(--color-base) / <alpha-value>)",
+				white: "rgb(var(--color-white) / <alpha-value>)",
+				black: "rgb(var(--color-black) / <alpha-value>)",
 				link: "rgb(var(--color-link) / <alpha-value>)",
 				tag: "rgb(var(--color-tag) / <alpha-value>)",
 				delete: "rgb(var(--color-delete) / <alpha-value>)",

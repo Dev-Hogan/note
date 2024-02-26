@@ -17,14 +17,16 @@ export default function Page() {
 		}
 		return themes[0]
 	})
-	const { setTheme } = useTheme()
+	const { setTheme, theme } = useTheme()
+	console.log(theme, "主题")
+
 	// const Dialog = useDialog({})
 
 	return (
 		<main>
 			开发工具
 			<div className="space-x-2">
-				<div>更换主题色</div>
+				<div className="text-theme">更换主题色</div>
 				{themes.map((t, i) => {
 					return (
 						<label
@@ -55,7 +57,7 @@ export default function Page() {
 				{useDialog({
 					title: "123",
 					content: <div>测试内容</div>,
-					footer: <NtButton>关闭</NtButton>,
+					footer: <NtButton type="theme">关闭</NtButton>,
 				})}
 			</div>
 		</main>

@@ -8,6 +8,7 @@
 
 :root {
 	font-size: 13px;
+	--color-back: 51 51 51;
 }
 
 @layer base {
