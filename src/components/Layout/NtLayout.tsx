@@ -53,7 +53,7 @@ export const NtContent = ({ children }: { children?: React.ReactNode }) => {
 	return (
 		<main className="flex flex-1 flex-col px-7">
 			<NtHeader></NtHeader>
-			{children}
+			<div className="w-[750px] mx-auto">{children}</div>
 		</main>
 	)
 }

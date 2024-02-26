@@ -3,7 +3,8 @@
 import { useState } from "react"
 import { getLocal, setLocal } from "@/utils"
 import { THEME_KEY } from "@/const"
-import { useTheme } from "@/components"
+import { useTheme, NtButton } from "@/components"
+import { useDialog } from "@/hooks"
 
 type Theme = "light" | "dark" | "origin"
 export default function Page() {
@@ -17,6 +18,7 @@ export default function Page() {
 		return themes[0]
 	})
 	const { setTheme } = useTheme()
+	// const Dialog = useDialog({})
 
 	return (
 		<main>
@@ -46,6 +48,14 @@ export default function Page() {
 							<div className="text-primary-6">{t}</div>
 						</label>
 					)
+				})}
+			</div>
+			<br />
+			<div>
+				{useDialog({
+					title: "123",
+					content: <div>测试内容</div>,
+					footer: <NtButton>关闭</NtButton>,
 				})}
 			</div>
 		</main>
